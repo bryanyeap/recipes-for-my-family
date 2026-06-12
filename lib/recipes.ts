@@ -127,6 +127,36 @@ export const recipes: Recipe[] = [
       'Add the honey — stir it in, or drizzle it on top as a finishing touch.',
     ],
   },
+  {
+    slug: 'tomato-soup',
+    title: 'Tomato Soup',
+    description:
+      'A warm, comforting tomato soup with a touch of cream — perfect with crusty bread on a chilly day.',
+    emoji: '🍅',
+    category: 'Soup',
+    prepTime: '10 min',
+    cookTime: '30 min',
+    servings: 4,
+    ingredients: [
+      '30 ml olive oil',
+      '1 onion, chopped (about 150g)',
+      '2 cloves garlic, minced',
+      '800g canned crushed tomatoes',
+      '250 ml vegetable stock',
+      '100 ml heavy cream',
+      '5g sugar',
+      'Salt and pepper, to taste',
+      'A handful of fresh basil leaves',
+    ],
+    steps: [
+      'Heat the olive oil in a large pot over medium heat. Add the onion and cook until softened, about 5 minutes.',
+      'Stir in the garlic and cook for 1 minute until fragrant.',
+      'Add the crushed tomatoes, vegetable stock, and sugar. Bring to a simmer and cook for 20 minutes, stirring occasionally.',
+      'Use an immersion blender to puree the soup until smooth.',
+      'Stir in the heavy cream and season with salt and pepper to taste.',
+      'Serve hot, garnished with fresh basil leaves.',
+    ],
+  },
 ]
 
 export function getAllRecipes(): Recipe[] {
