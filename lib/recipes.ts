@@ -157,6 +157,29 @@ export const recipes: Recipe[] = [
       'Serve hot, garnished with fresh basil leaves.',
     ],
   },
+  {
+    slug: 'iced-latte',
+    title: 'Iced Latte',
+    description:
+      'A smooth, creamy iced latte — bold espresso poured over milk and ice for a refreshing pick-me-up.',
+    emoji: '🥤',
+    category: 'Drink',
+    prepTime: '5 min',
+    cookTime: 'No cooking required',
+    servings: 1,
+    ingredients: [
+      '60 ml freshly brewed espresso (or strong coffee)',
+      '180 ml milk',
+      '10 ml simple syrup, to taste (optional)',
+      'Ice cubes',
+    ],
+    steps: [
+      'Fill a tall glass with ice cubes.',
+      'Pour the milk over the ice, leaving room at the top.',
+      'If using, stir the simple syrup into the milk.',
+      'Slowly pour the espresso over the top and serve with a straw.',
+    ],
+  },
 ]
 
 export function getAllRecipes(): Recipe[] {

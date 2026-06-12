@@ -12,6 +12,8 @@
 
 # testing
 /coverage
+.claude/ui-review-screenshots/
+.playwright-mcp/
 
 # next.js
 /.next/

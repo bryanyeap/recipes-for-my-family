@@ -58,7 +58,7 @@ export default async function RecipePage({
           {recipe.description}
         </p>
 
-        <dl className="mt-2 flex flex-wrap gap-x-8 gap-y-3 rounded-2xl border border-black/[.08] bg-white p-5 text-sm dark:border-white/[.145] dark:bg-zinc-900">
+        <dl className="mt-2 grid grid-cols-1 gap-4 rounded-2xl border border-black/[.08] bg-white p-5 text-sm sm:grid-cols-3 dark:border-white/[.145] dark:bg-zinc-900">
           <div>
             <dt className="text-zinc-500 dark:text-zinc-500">Prep time</dt>
             <dd className="font-medium text-zinc-900 dark:text-zinc-50">{recipe.prepTime}</dd>

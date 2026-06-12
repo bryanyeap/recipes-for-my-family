@@ -22,7 +22,7 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
         </p>
         <div className="flex items-center gap-4 pt-2 text-xs text-zinc-500 dark:text-zinc-500">
           <span>⏱ {recipe.prepTime} prep</span>
-          <span>🔥 {recipe.cookTime} cook</span>
+          <span>🔥 {recipe.cookTime.toLowerCase().includes('required') ? recipe.cookTime : `${recipe.cookTime} cook`}</span>
           <span>🍽 Serves {recipe.servings}</span>
         </div>
       </div>
