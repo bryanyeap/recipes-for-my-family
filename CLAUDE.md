@@ -41,4 +41,9 @@ Per [AGENTS.md](AGENTS.md): the installed Next.js version has breaking API/conve
 
 ### Adding recipes
 
-- The `/new-recipe` slash command ([.claude/commands/new-recipe.md](.claude/commands/new-recipe.md)) inserts a new entry into the `recipes` array (or the database, once one exists) and curls the new `/recipes/<slug>` route as a smoke test. When adding recipes manually, match the existing data conventions in [lib/recipes.ts](lib/recipes.ts) (lowercase-hyphen slugs, lowercase ingredient units like `tbsp`/`cup`, single-emoji thumbnails, one `category` string per recipe).
+- The `/new-recipe` slash command ([.claude/commands/new-recipe.md](.claude/commands/new-recipe.md)) inserts a new entry into the `recipes` array (or the database, once one exists), curls the new `/recipes/<slug>` route as a smoke test, and invokes the `ui-ux-reviewer` agent to review the new recipe's card and detail page. If only a recipe name is given (no other details), it generates the rest (description, emoji, category, ingredients, steps) from the name. When adding recipes manually, match the existing data conventions in [lib/recipes.ts](lib/recipes.ts): lowercase-hyphen slugs, single-emoji thumbnails, one `category` string per recipe.
+- **Ingredient units**: recipes added via `/new-recipe` use grams/ml (per its preferences). Earlier recipes use `cup`/`tbsp`/`tsp` — units are intentionally mixed/not retroactively normalized; match whichever convention the recipe you're editing already uses.
+
+### Custom agents
+
+- [.claude/agents/ui-ux-reviewer.md](.claude/agents/ui-ux-reviewer.md) — drives a real browser via the Playwright MCP server to review a component/page's visual design, UX, and accessibility against a running dev server. Used by `/new-recipe` after inserting a recipe, or on demand (e.g. "review the RecipeCard component"). Screenshots are saved to `.claude/ui-review-screenshots/` (gitignored), never the repo root.

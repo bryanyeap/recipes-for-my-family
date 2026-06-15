@@ -26,6 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 - `components/` — Shared UI components (`RecipeCard`, `SiteHeader`)
 - `lib/recipes.ts` — Recipe data and lookup functions
 - `.claude/commands/new-recipe.md` — `/new-recipe` slash command for adding recipes
+- `.claude/agents/ui-ux-reviewer.md` — agent that reviews recipe pages for design/UX/accessibility via a real browser
 
 ## Stack
 
