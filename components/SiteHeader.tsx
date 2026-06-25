@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { SignedIn, SignedOut, UserButton } from '@neondatabase/auth/react'
+import ThemeToggle from './ThemeToggle'
 
 export default function SiteHeader() {
   return (
@@ -15,6 +17,15 @@ export default function SiteHeader() {
           <Link href="/recipes" className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-50">
             Recipes
           </Link>
+          <ThemeToggle />
+          <SignedOut>
+            <Link href="/auth/sign-in" className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-50">
+              Sign In
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </nav>
       </div>
     </header>

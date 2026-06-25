@@ -1,0 +1,10 @@
+{
+  "_init": {
+    "features": [
+      "database",
+      "auth"
+    ]
+  },
+  "orgId": "org-little-pond-70339987",
+  "projectId": "soft-shape-42004190"
+}

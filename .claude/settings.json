@@ -29,5 +29,8 @@
       "mcp__context7__resolve-library-id",
       "mcp__context7__query-docs"
     ]
+  },
+  "enabledPlugins": {
+    "github@claude-plugins-official": true
   }
 }
