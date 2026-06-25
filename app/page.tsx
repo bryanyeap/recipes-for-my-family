@@ -20,7 +20,7 @@ export default function Home() {
         </p>
         <Link
           href="/recipes"
-          className="mt-2 flex h-12 items-center justify-center rounded-full bg-foreground px-6 text-base font-medium text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc]"
+          className="mt-2 flex h-12 items-center justify-center rounded-full bg-zinc-900 px-6 text-base font-medium text-zinc-50 transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-300"
         >
           Browse all recipes
         </Link>
